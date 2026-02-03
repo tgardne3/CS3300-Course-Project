@@ -1,14 +1,3 @@
-h1 {
+.web-title {
     text-align: center;
-}
-
-.drop-down {
-    display:inline-block;
-}
-.drop-down:visited {
-    padding: 10px 10px;
-}
-
-.drop-down:hover {
-    background-color:white;
 }

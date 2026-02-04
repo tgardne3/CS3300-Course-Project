@@ -1,4 +1,7 @@
-/*names: Azam, Brandon, David, Trey*/
+/*
+names: Azam, Brandon, David, Trey
+class: CS3300
+*/
 
 
 /*header formatting*/
@@ -7,4 +10,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+nav.header-container {
+    justify-content: right;
 }

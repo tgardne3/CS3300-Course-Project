@@ -14,3 +14,10 @@ class: CS3300
 nav.header-container {
     justify-content: right;
 }
+
+.sign-up-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: left;
+}

@@ -1,6 +1,35 @@
+/*
+names: Azam, Brandon, David, Trey
+class: CS3300
+*/
 
 
+//defining inputs from sign-up page
+const first_name_input = document.getElementByID('first_name');
+const last_name_input = document.getElementByID('last_name');
+const username_input = document.getElementByID('username');
+const email_input = document.getElementByID('email');
+const password_input = document.getElementByID('password');
+const submit_button = document.getElementByID('sign-up-button');
 
-function drop_down() {
-//change page or open new page
-}
+//submit button definition
+submit_button.addEventListener('click', collect_data);
+
+//collect and store data when submit button is clicked
+function collect_data() {
+    const first_name = first_name_input.value;
+    const last_name = last_name_input.value;
+    const username = username_input.value;
+    const email = email_input.value;
+    const password = password_input.value;
+
+    //displaying finished sign-up page
+    window.location.href = "./sucessful-sign-up.html";
+    setTimeout(() => {
+        console.log("displaying success page");
+    }, 5000);
+
+    //reverting to homepage
+    window.location.href = "./index.html";
+
+}//collect_data

@@ -4,7 +4,7 @@ class: CS3300
 */
 
 
-/*header formatting*/
+/*Home Page*/
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -26,6 +26,8 @@ class: CS3300
     text-align: right;
     flex: 1;
 }
+
+/*Sign Up Page*/
 .sign-up-input {
     display: flex;
     flex-direction: column;
@@ -35,6 +37,22 @@ class: CS3300
     float: center;
 }
 
+
+
+input.sign-up-input {
+    width:150px;
+    margin: 0 auto;
+}
+
+.sign-up-header {
+    text-align: center;
+}
+
+button.sign-up-input {
+    margin: 0 auto;
+}
+
+/*Sign In Page*/
 .sign-in-input {
     display: flex;
     flex-direction: column;
@@ -42,14 +60,10 @@ class: CS3300
     justify-content: center;
     text-align: center;
     float: center;
+    margin: 0 auto;
 }
 
 input.sign-in-input {
     width: 150px;
-    margin: 0 auto;
-}
-
-input.sign-up-input {
-    width:150px;
     margin: 0 auto;
 }

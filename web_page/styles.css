@@ -7,14 +7,25 @@ class: CS3300
 /*header formatting*/
 .header-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-}
-nav.header-container {
-    justify-content: right;
 }
 
+
+.left-header {
+    text-align: left;
+    flex: 1;
+}
+
+.center-header {
+    text-align: center;
+    flex: 1;
+}
+
+.right-header {
+    text-align: right;
+    flex: 1;
+}
 .sign-up-inputs {
     display: flex;
     flex-direction: column;

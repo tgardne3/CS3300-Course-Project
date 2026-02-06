@@ -67,3 +67,7 @@ input.sign-in-input {
     width: 150px;
     margin: 0 auto;
 }
+
+div.sign-in-header {
+    text-align: center;
+}

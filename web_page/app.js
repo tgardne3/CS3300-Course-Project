@@ -12,8 +12,6 @@ const email_input = document.getElementByID('email');
 const password_input = document.getElementByID('password');
 const submit_button = document.getElementByID('sign-up-button');
 
-//submit button definition
-submit_button.addEventListener('click', collect_data);
 
 //collect and store data when submit button is clicked
 function collect_data() {
@@ -24,12 +22,12 @@ function collect_data() {
     const password = password_input.value;
 
     //displaying finished sign-up page
-    window.location.href = "./sucessful-sign-up.html";
+    window.location.replace("http://127.0.0.1:5500/web_page/successful-sign-up.html");
     setTimeout(() => {
         console.log("displaying success page");
     }, 5000);
 
     //reverting to homepage
-    window.location.href = "./index.html";
+    window.location.replace("https:127.0.0.1:5500/web_page/index.html");
 
 }//collect_data

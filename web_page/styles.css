@@ -9,23 +9,37 @@ class: CS3300
     display: flex;
     justify-content: space-between;
 }
-.left-header {
-    text-align: left;
+.header-container a {
+    color: inherit;
+    text-decoration: none;
+}
+.left-header, 
+.left-header h2,
+.left-header a {
     flex: 1;
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+}
+.left-header img {
+    width: 75px;
+    height: 75px;
+    border-radius: 35px;
 }
 .center-header {
     text-align: center;
     flex: 1;
 }
+.center-header img {
+    width: 400px;
+    height: 150px;
+    border-radius: 15px;
+}
 .right-header {
     text-align: right;
     flex: 1;
 }
-.center-header img {
-    width: 500px;
-    height: 200px;
-    border-radius: 15px;
-}
+
 /*End Page Headers*/
 
 /*Games List*/
@@ -39,8 +53,8 @@ class: CS3300
    text-align: left; 
 }
 .game img {
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 75px;
     border-radius: 5px;
 }
 /*END Games List*/

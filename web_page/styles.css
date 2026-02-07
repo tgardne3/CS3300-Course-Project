@@ -4,11 +4,10 @@ class: CS3300
 */
 
 
-/*All Page Headers*/
+/*Page Headers*/
 .header-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 .left-header {
     text-align: left;
@@ -22,9 +21,32 @@ class: CS3300
     text-align: right;
     flex: 1;
 }
-/*End All Page Headers*/
+.center-header img {
+    width: 500px;
+    height: 200px;
+    border-radius: 15px;
+}
+/*End Page Headers*/
 
-/*User Forms*/
+/*Games List*/
+.games-container,
+.games-container img,
+.games-container a {
+    display: flex;
+    flex-direction: column;
+}
+.game {
+   text-align: left; 
+}
+.game img {
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+}
+/*END Games List*/
+
+
+/*User Form*/
 .user-form,
 .user-form label,
 .user-form input,
@@ -34,12 +56,10 @@ class: CS3300
     gap: 10px;
     text-align: center;
 }
-
 .user-form input {
     margin: 0 auto;
     width: 150px;
 }
-
 .user-form button {
     margin: 0 auto;
 }

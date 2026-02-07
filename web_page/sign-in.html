@@ -17,13 +17,22 @@ class: CS3300
     <div class="sign-in-header">
       <h1>Sign In To Your Account</h1>
     </div>
-    <!--username/email-->
-    <label class="sign-in-input" for="username">username/email</label>
-    <input class="sign-in-input" type="text/email" id="username" name="username">
 
-    <!--password-->
-    <label class="sign-in-input" for="password">password</label>
-    <input class="sign-in-input" type="password" id="password" name="password">
+    <div class="sign-in-input">
+      <form>
+        <!--username/email-->
+        <label class="sign-in-input" for="username">username/email</label>
+        <input class="sign-in-input" type="text/email" id="username" name="username">
+
+        <!--password-->
+        <label class="sign-in-input" for="password">password</label>
+        <input class="sign-in-input" type="password" id="password" name="password">
+
+        <button class="sign-in-input" type="button" onclick="sign_in()" id="sign-in-button">Sign In</button>
+
+        <script src="app.js"></script>
+      </form>
+    </div>
 
   </body>
 </html>

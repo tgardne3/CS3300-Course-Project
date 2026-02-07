@@ -4,30 +4,39 @@ class: CS3300
 */
 
 
-//defining inputs from sign-up page
-const first_name_input = document.getElementByID('first_name');
-const last_name_input = document.getElementByID('last_name');
-const username_input = document.getElementByID('username');
-const email_input = document.getElementByID('email');
-const password_input = document.getElementByID('password');
-const submit_button = document.getElementByID('sign-up-button');
-
-
 //collect and store data when submit button is clicked
 function collect_data() {
-    const first_name = first_name_input.value;
-    const last_name = last_name_input.value;
-    const username = username_input.value;
-    const email = email_input.value;
-    const password = password_input.value;
+    const first_name = document.getElementById('first_name').value;
+    const last_name = document.getElementById('last_name').value;
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-    //displaying finished sign-up page
-    window.location.replace("http://127.0.0.1:5500/web_page/successful-sign-up.html");
-    setTimeout(() => {
-        console.log("displaying success page");
-    }, 5000);
+    //store + process data here
+    console.log("User data collected: ", {first_name, last_name, username, email, password});//print debugging
 
-    //reverting to homepage
-    window.location.replace("https:127.0.0.1:5500/web_page/index.html");
-
+    //redirecting to success page
+    window.location.href = "successful-sign-up.html";
 }//collect_data
+
+//signing in verification
+function sign_in() {
+    //pull values
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    //verify with db
+    console.log("Verify Info: ", {username, password});//print debugging
+
+    redirect_to_home();
+}
+
+
+
+//redirecting to home page () second delay
+function redirect_to_home() {
+    setTimeout(() => {
+        window.location.href = "index.html"
+    }, 2000);
+
+}//successful redirect

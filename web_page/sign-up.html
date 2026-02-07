@@ -13,33 +13,38 @@ class: CS3300
   </head>
 
   <body style="background-color: lightslategray">
-    <div class="sign-up-header">
-      <h1>Sign Up To Save Your Progress</h1>
+    <!--HEADER-->
+    <div class="header-container">
+      <div class="center-header">
+        <h1>Sign Up To Save Your Progress</h1>
+      </div>
     </div>
-    <div class="sign-up-inputs">
+    <!--END HEADER-->
+
+    <div class="user-form">
       <form id="sign-up-form">
         <!--first name input-->
-        <label class="sign-up-input" for="First Name">First Name:</label>
-        <input class="sign-up-input" type="text" id="first_name"/>
+        <label for="First Name">First Name:</label>
+        <input type="text" id="first_name"/>
 
         <!--last name input-->
-        <label class="sign-up-input" for="Last Name">Last Name:</label>
-        <input class="sign-up-input" type="text" id="last_name"/>
+        <label for="Last Name">Last Name:</label>
+        <input type="text" id="last_name"/>
 
         <!--username input-->
-        <label class="sign-up-input" class="sign-up-input" for="username">Username:</label>
-        <input class="sign-up-input" type="text" id="username"/>
+        <label class="sign-up-input" for="username">Username:</label>
+        <input type="text" id="username"/>
 
         <!--email input-->
-        <label class="sign-up-input" for="Email">Email</label>
-        <input class="sign-up-input" type="email" id="email"/>
+        <label for="Email">Email</label>
+        <input type="email" id="email"/>
 
         <!--password input-->
-        <label class="sign-up-input" for="password">Password</label>
-        <input class="sign-up-input" type="password" id="password"/>
+        <label for="password">Password</label>
+        <input type="password" id="password"/>
  
         <!--sign-up finish button-->
-        <button class="sign-up-input" type="button" onclick="collect_data()" id="sign-up-button">Submit</button>
+        <button type="button" onclick="collect_data()" id="sign-up-button">Submit</button>
 
         <script src="app.js"></script>
       </form>

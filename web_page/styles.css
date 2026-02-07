@@ -4,70 +4,43 @@ class: CS3300
 */
 
 
-/*Home Page*/
+/*All Page Headers*/
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-
 .left-header {
     text-align: left;
     flex: 1;
 }
-
 .center-header {
     text-align: center;
     flex: 1;
 }
-
 .right-header {
     text-align: right;
     flex: 1;
 }
+/*End All Page Headers*/
 
-/*Sign Up Page*/
-.sign-up-input {
+/*User Forms*/
+.user-form,
+.user-form label,
+.user-form input,
+.user-form button {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    justify-content: center;
-    text-align: center;
-    float: center;
-}
-
-
-
-input.sign-up-input {
-    width:150px;
-    margin: 0 auto;
-}
-
-.sign-up-header {
     text-align: center;
 }
 
-button.sign-up-input {
+.user-form input {
     margin: 0 auto;
-}
-
-/*Sign In Page*/
-.sign-in-input {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    text-align: center;
-    float: center;
-    margin: 0 auto;
-}
-
-input.sign-in-input {
     width: 150px;
-    margin: 0 auto;
 }
 
-div.sign-in-header {
-    text-align: center;
+.user-form button {
+    margin: 0 auto;
 }
+/*END User Forms*/

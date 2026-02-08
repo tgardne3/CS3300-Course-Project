@@ -5,13 +5,22 @@ class: CS3300
 
 //Will probably replace with REACT implementation
 function game_search() {
-    var input = document.getElementById("game_search");
+    const search = document.getElementById("game_search");
 
-    input.addEventListener("keydown", function(event) {
+    //captures "Enter" key for searching
+    search.addEventListener('keydown', (event) => {
+        //if Enter is pressed
+        if (event.key === 'Enter') {
 
-        if (event.key === "Enter") {
-            event.preventDefault();
-            //search page for matching games
+            //capture search key value
+            const search_value = search.value;
+            //debugging print line
+            console.log("enter key pressed: ", search_value);
+            //clearing input
+            search.value = '';
+
+            //search games and display results...
+
         }
     });
 }

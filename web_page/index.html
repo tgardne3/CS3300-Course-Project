@@ -29,7 +29,7 @@ class: CS3300
         
     </head>
 
-    <body style = "background-color:lightslategray">
+    <body style = "background-color:lightslategray" onload="game_search()">
         <!--HEADER-->
         <div class="header-container">
             <!--Left Section-->
@@ -55,8 +55,7 @@ class: CS3300
 
             <h2>List of Games:</h2>
             <div class="game-search">
-                <label for="game-search">Search for Games</label>
-                <input type="text" id="game_search"/>
+                <input type="text" id="game_search" placeholder="Search games..." autocomplete="off"/>
             </div>
 
             <div class="game">

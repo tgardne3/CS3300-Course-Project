@@ -49,6 +49,9 @@ class: CS3300
     display: flex;
     flex-direction: column;
 }
+.games-container h2 {
+    margin-left: 25px;
+}
 .game-search {
     display: flex;
     flex-direction: column;
@@ -64,11 +67,15 @@ class: CS3300
 }
 .game {
    text-align: left; 
+   margin-left: 25px;
 }
 .game img {
     width: 150px;
     height: 75px;
     border-radius: 5px;
+}
+.game label {
+    margin-left: 40px;
 }
 /*END Games List*/
 

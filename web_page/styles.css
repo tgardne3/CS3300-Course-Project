@@ -49,6 +49,19 @@ class: CS3300
     display: flex;
     flex-direction: column;
 }
+.game-search {
+    display: flex;
+    flex-direction: column;
+}
+.game-search label {
+    margin-left: 45px;
+}
+.game-search input {
+    width: 200px;
+    height: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
 .game {
    text-align: left; 
 }

@@ -3,6 +3,18 @@ names: Azam, Brandon, David, Trey
 class: CS3300
 */
 
+//Will probably replace with REACT implementation
+function game_search() {
+    var input = document.getElementById("game_search");
+
+    input.addEventListener("keydown", function(event) {
+
+        if (event.key === "Enter") {
+            event.preventDefault();
+            //search page for matching games
+        }
+    });
+}
 
 //collect and store data when submit button is clicked
 function sign_up() {
@@ -35,7 +47,6 @@ function sign_in() {
 
     redirect_to_home();
 }
-
 
 
 //redirecting to home page () second delay

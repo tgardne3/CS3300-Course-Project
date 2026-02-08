@@ -58,6 +58,9 @@ class: CS3300
     align-items: center;
     text-align: center;
 }
+.games-container h2 {
+    font-size: 30px;
+}
 
 /*Search Bar*/
 .game-search {
@@ -72,15 +75,20 @@ class: CS3300
     font-size: 18px;
     background-color: darkgray;
 }
-
+.game-search label {
+    font-size: 22px;
+}
 /*Individual Game Item*/
 .game {
    text-align: center; 
 }
 .game img {
-    width: 150px;
-    height: 75px;
+    width: 200px;
+    height: 130px;
     border-radius: 5px;
+}
+.game label {
+    font-size: 22px;
 }
 /*END Games List*/
 

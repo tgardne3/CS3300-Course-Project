@@ -43,39 +43,44 @@ class: CS3300
 /*End Page Headers*/
 
 /*Games List*/
+
+/*List Container*/
+.games-container {
+    margin-top: 45px;
+}
 .games-container,
 .games-container img,
-.games-container a {
+.games-container a 
+.games-container label {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.games-container h2 {
-    margin-left: 25px;
-}
+
+/*Search Bar*/
 .game-search {
     display: flex;
     flex-direction: column;
 }
-.game-search label {
-    margin-left: 45px;
-}
 .game-search input {
-    width: 200px;
-    height: 20px;
+    width: 250px;
+    height: 30px;
     border-radius: 10px;
     margin-bottom: 50px;
+    font-size: 18px;
+    background-color: darkgray;
 }
+
+/*Individual Game Item*/
 .game {
-   text-align: left; 
-   margin-left: 25px;
+   text-align: center; 
 }
 .game img {
     width: 150px;
     height: 75px;
     border-radius: 5px;
-}
-.game label {
-    margin-left: 40px;
 }
 /*END Games List*/
 
@@ -92,10 +97,28 @@ class: CS3300
 }
 .user-form input {
     margin: 0 auto;
-    width: 150px;
+    width: 170px;
+    height: 30px;
     border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    background-color: darkgray;
 }
 .user-form button {
     margin: 0 auto;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    justify-content: center;
+    background-color: lightblue;
+    color: black;
+}
+.user-form span,
+.user-form label {
+    display: inline-block;
+}
+.user-form span {
+    color:#e12f47; 
 }
 /*END User Forms*/

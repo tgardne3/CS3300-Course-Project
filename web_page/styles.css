@@ -73,6 +73,7 @@ class: CS3300
 .user-form input {
     margin: 0 auto;
     width: 150px;
+    border-radius: 10px;
 }
 .user-form button {
     margin: 0 auto;

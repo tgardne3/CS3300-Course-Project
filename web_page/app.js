@@ -5,19 +5,23 @@ class: CS3300
 
 
 //collect and store data when submit button is clicked
-function collect_data() {
-    const first_name = document.getElementById('first_name').value;
-    const last_name = document.getElementById('last_name').value;
+function sign_up() {
     const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+    const password_check = document.getElementById('confirm_password').value;
 
+    //AZAM: STORE DATA IF PASSWORDS MATCH
     //store + process data here
-    console.log("User data collected: ", {first_name, last_name, username, email, password});//print debugging
 
-    //redirecting to success page
-    window.location.href = "successful-sign-up.html";
-}//collect_data
+    if (password == password_check) {
+        //redirecting to success page
+        console.log("User data collected: ", {username, password});//print debugging
+        window.location.href = "successful-sign-up.html";
+    }
+    else {
+        console.log("passwords don't match");
+    }
+}//sign_in
 
 //signing in verification
 function sign_in() {
@@ -25,7 +29,8 @@ function sign_in() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    //verify with db
+
+    //AZAM: VERIFY USERNAME + PASSWORD WITH DB
     console.log("Verify Info: ", {username, password});//print debugging
 
     redirect_to_home();

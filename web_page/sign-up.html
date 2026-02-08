@@ -35,28 +35,19 @@ class: CS3300
 
     <div class="user-form">
       <form id="sign-up-form">
-        <!--first name input-->
-        <label for="First Name">First Name:</label>
-        <input type="text" id="first_name"/>
-
-        <!--last name input-->
-        <label for="Last Name">Last Name:</label>
-        <input type="text" id="last_name"/>
-
         <!--username input-->
-        <label class="sign-up-input" for="username">Username:</label>
+        <label class="sign-up-input" for="username">Create Username</label>
         <input type="text" id="username"/>
 
-        <!--email input-->
-        <label for="Email">Email</label>
-        <input type="email" id="email"/>
-
         <!--password input-->
-        <label for="password">Password</label>
+        <label for="password">Create Password</label>
         <input type="password" id="password"/>
+
+        <label for="password">Confirm Password</label>
+        <input type="password" id="confirm_password"/>
  
         <!--sign-up finish button-->
-        <button type="button" onclick="collect_data()" id="sign-up-button">Submit</button>
+        <button type="button" onclick="sign_up()" id="sign-up-button">Submit</button>
 
         <script src="app.js"></script>
       </form>

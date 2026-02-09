@@ -3,11 +3,20 @@ names: Azam, Brandon, David, Trey
 class: CS3300
 */
 
+/*Home Page*/
+.homepage {
+    background: linear-gradient(#141414, #222222);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
+}
 /*Page Headers*/
 .header-container {
     display: flex;
     justify-content: space-between;
+    color: white;
 }
 .header-container a {
     color: inherit;
@@ -48,6 +57,7 @@ class: CS3300
 /*List Container*/
 .games-container {
     margin-top: 45px;
+    color: white;
 }
 .games-container,
 .games-container img,
@@ -95,6 +105,9 @@ class: CS3300
 
 
 /*User Form*/
+.user-form {
+    color: white;
+}
 .user-form,
 .user-form label,
 .user-form input,
@@ -120,7 +133,7 @@ class: CS3300
     border-radius: 20px;
     font-size: 20px;
     justify-content: center;
-    background-color: lightblue;
+    background-color: #FFED29;
     color: black;
 }
 .user-form span,

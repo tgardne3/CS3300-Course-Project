@@ -5,7 +5,7 @@ class: CS3300
 
 /*Home Page*/
 .homepage {
-    background: linear-gradient(#141414, #222222);
+    background: linear-gradient(45deg, #141414, #222222);
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
@@ -78,6 +78,7 @@ class: CS3300
     justify-content: center;
     align-items: center;
     text-align: center;
+    white-space: nowrap;
 }
 .games-container h2 {
     font-size: 30px;
@@ -100,18 +101,24 @@ class: CS3300
 .game-search label {
     font-size: 22px;
 }
+
+.games-list {
+    display: flex;
+    flex-direction: row;
+}
 /*Individual Game Item*/
 .game {
    text-align: center; 
    color: white;
+   margin: 10px;
 }
 .game img {
-    width: 200px;
-    height: 130px;
+    width: 400px;
+    height: 260px;
     border-radius: 5px;
 }
 .game label {
-    font-size: 22px;
+    font-size: 25px;
 }
 /*END Games List*/
 

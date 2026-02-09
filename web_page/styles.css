@@ -48,6 +48,8 @@ class: CS3300
 .right-header {
     text-align: right;
     flex: 1;
+    margin-top: 15px;
+    margin-right: 15px;
 }
 
 /*End Page Headers*/
@@ -57,7 +59,7 @@ class: CS3300
 /*List Container*/
 .games-container {
     margin-top: 45px;
-    color: white;
+    color: #FFED29;
 }
 .games-container,
 .games-container img,
@@ -77,6 +79,7 @@ class: CS3300
 .game-search {
     display: flex;
     flex-direction: column;
+    color: white;
 }
 .game-search input {
     width: 250px;
@@ -92,6 +95,7 @@ class: CS3300
 /*Individual Game Item*/
 .game {
    text-align: center; 
+   color: white;
 }
 .game img {
     width: 200px;

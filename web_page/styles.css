@@ -165,3 +165,18 @@ class: CS3300
     color:#e12f47; 
 }
 /*END User Forms*/
+
+/*About Section*/
+.about p {
+   color: white; 
+   margin-left: 55px;
+   margin-bottom: 50px
+}
+.about h2 {
+    font-family: 'Gravitas One', serif;
+    font-weight: 250;
+    color: #FFED29;
+    margin-top: 100px;
+    margin-left: 35px;
+    
+}

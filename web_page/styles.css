@@ -119,6 +119,9 @@ class: CS3300
     height: 260px;
     border-radius: 5px;
 }
+.game:hover {
+    animation: hover_react ease-out 0.25s forwards;
+}
 .game label {
     font-size: 25px;
 }
@@ -158,7 +161,7 @@ class: CS3300
     background-color: #FFED29;
     color: black;
 }
-.user-form span,
+
 .user-form label {
     display: inline-block;
 }
@@ -212,11 +215,19 @@ class: CS3300
     0% {
         background-position: 100% center;
     }
-    50% {
+    100% {
         backgound-position: -100% center;
     }
 }
 
+@keyframes hover_react {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
 /*Games*/
 
 /*Hangman*/

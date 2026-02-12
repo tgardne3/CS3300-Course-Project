@@ -104,14 +104,23 @@ class: CS3300
     font-size: 22px;
 }
 
+.list-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 230, 105);
+    border-radius: 15px;
+    width: 875px;
+}
 .games-list {
     display: flex;
+    justify-content: center;
     flex-direction: row;
+    border-radius: 10px;
 }
 /*Individual Game Item*/
 .game {
    text-align: center; 
-   color: white;
+   color: black;
    margin: 10px;
 }
 .game img {
@@ -182,7 +191,6 @@ class: CS3300
     color: #FFED29;
     margin-top: 100px;
     margin-left: 35px;
-    
 }
 
 

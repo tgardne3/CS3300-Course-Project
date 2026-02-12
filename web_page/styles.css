@@ -64,6 +64,27 @@ class: CS3300
 
 /*End Page Headers*/
 
+/*Leaderboard*/
+.leaderboard-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(252, 234, 143);
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    margin: 20px;
+    font-size: 22px;
+}
+
+table, th, td{
+    border: 2px solid;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px;
+    
+}
+
 /*Games List*/
 
 /*List Container*/
@@ -107,7 +128,7 @@ class: CS3300
 .list-container {
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 230, 105);
+    background-color: rgb(252, 234, 143);
     border-radius: 15px;
     width: 875px;
 }

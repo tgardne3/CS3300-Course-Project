@@ -4,77 +4,80 @@
 names: Azam, Brandon, David, Trey
 class: CS3300 
 -->
-    <head>
-        <!--linking css file-->
-        <link rel="stylesheet" href="styles.css" type="text/css" />
-        
-        <!--linking javascript file-->
-        <script type="text/javascript" src="app.js"></script>
 
-        <!--Linking Fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+<head>
+    <!--linking css file-->
+    <link rel="stylesheet" href="styles.css" type="text/css" />
 
-        <!---setting character set to standard utf-8-->
-        <meta charset=""utf-8">
+    <!--linking javascript file-->
+    <script type="text/javascript" src="app.js"></script>
 
-        <!--setting scaling of window to device size with no zoom-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Linking Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
 
-        <!--settings keywords for HTTP reader?-->
-        <meta name="keywords" content="HTML, CSS">
+    <!---setting character set to standard utf-8-->
+    <meta charset="" utf-8">
 
-        <!--webpage description-->
-        <meta name="description" content="the homepage of our cool gaming website">
+    <!--setting scaling of window to device size with no zoom-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!--temporary title of webpage (browser tab)-->
-        <title>CS3300 Course Project</title>
+    <!--settings keywords for HTTP reader?-->
+    <meta name="keywords" content="HTML, CSS">
 
-        
-    </head>
+    <!--webpage description-->
+    <meta name="description" content="the homepage of our cool gaming website">
 
-    <body class="homepage" onload="game_search()">
-        <!--HEADER-->
-        <div class="header-container">
-            <!--Left Section-->
-            <div class="left-header">
-                <!---add live leaderboard here...-->
-            </div>
-            <!--Center Section-->
-            <div class="center-header">
-                <!--temporary title of webpage (website header)-->
-                <h1 class="homepage">CS3300 Course Project</h1>
-            </div>
-            <!--Right Section-->
-            <div class="right-header">
-                <nav>
-                    <a href="sign-in.html">Sign In |</a>
-                    <a href="sign-up.html">Sign Up</a>
-                </nav>
-            </div>
+    <!--temporary title of webpage (browser tab)-->
+    <title>CS3300 Course Project</title>
+
+
+</head>
+
+<body class="homepage" onload="game_search()">
+    <!--HEADER-->
+    <div class="header-container">
+        <!--Left Section-->
+        <div class="left-header">
+            <!---add live leaderboard here...-->
         </div>
-        <!--END HEADER-->
+        <!--Center Section-->
+        <div class="center-header">
+            <!--temporary title of webpage (website header)-->
+            <h1 class="homepage">CS3300 Course Project</h1>
+        </div>
+        <!--Right Section-->
+        <div class="right-header">
+            <nav>
+                <a href="sign-in.html">Sign In |</a>
+                <a href="sign-up.html">Sign Up</a>
+            </nav>
+        </div>
+    </div>
+    <!--END HEADER-->
 
-        <!--Game List Div-->
-        <div class="games-container">
+    <!--Game List Div-->
+    <div class="games-container">
 
-            <h2>List of Games:</h2>
-            <div class="game-search">
-                <input type="text" id="game_search" placeholder="Search games..." autocomplete="off"/>
-            </div>
+        <h2>List of Games:</h2>
+        <div class="game-search">
+            <input type="text" id="game_search" placeholder="Search games..." autocomplete="off" />
+        </div>
+
+        <div class="list-container">
 
             <div class="games-list">
                 <div class="game">
                     <label for="hangman">Hangman</label>
                     <a href="./games/hangman/hangman.html">
-                        <img src="./images/test_game_image.jpeg" alt="...test game image..."/>
+                        <img src="./images/test_game_image.jpeg" alt="...test game image..." />
                     </a>
                 </div>
                 <div class="game">
                     <label for="snake">Snake</label>
                     <a href="./games/snake/snake.html">
-                        <img src="./images/test_game_image.jpeg" alt="...test game image..."/>
+                        <img src="./images/test_game_image.jpeg" alt="...test game image..." />
                     </a>
                 </div>
             </div>
@@ -83,13 +86,13 @@ class: CS3300
                 <div class="game">
                     <label for="test_game">Typing Test</label>
                     <a href="./games/typing_test/typing_test.html">
-                        <img src="./images/test_game_image.jpeg" alt="...test game image..."/>
+                        <img src="./images/test_game_image.jpeg" alt="...test game image..." />
                     </a>
                 </div>
                 <div class="game">
                     <label for="test_game">Test Game(4)</label>
                     <a href="./games/game_4/test_game-4.html">
-                        <img src="./images/test_game_image.jpeg" alt="...test game image..."/>
+                        <img src="./images/test_game_image.jpeg" alt="...test game image..." />
                     </a>
                 </div>
             </div>
@@ -97,22 +100,24 @@ class: CS3300
                 <div class="game">
                     <label for="test_game">Test Game (5)</label>
                     <a href="./games/games_5/test_game-5.html">
-                        <img src="./images/test_game_image.jpeg" alt="...test game image..."/>
+                        <img src="./images/test_game_image.jpeg" alt="...test game image..." />
                     </a>
                 </div>
                 <div class="game">
                     <label for="test_game">Test Game (6)</label>
-                    <a href="./games/game_6/test_game-6.html">
-                        <img src="./images/test_game_image.jpeg" alt="...test game image..."/>
+                    <a href="./games/games_6/test_game-6.html">
+                        <img src="./images/test_game_image.jpeg" alt="...test game image..." />
                     </a>
                 </div>
             </div>
         </div>
 
-        <div class="about">
-            <h2>About the Developers:</h2>
-            <p>This website was designed entirely by the team of developers - Azam Jaffer, Brandon Sith, David Zarkovachi and Trey Gardner</p>
-        </div>
-    </body>
+    </div>
+    <div class="about">
+        <h2>About the Developers:</h2>
+        <p>This website was designed entirely by the team of developers - Azam Jaffer, Brandon Sith, David Zarkovachi
+            and Trey Gardner</p>
+    </div>
+</body>
 
 </html>

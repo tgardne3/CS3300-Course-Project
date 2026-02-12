@@ -127,7 +127,6 @@ let words = [
 
 // assign and declare variables
 let word = words[(Math.floor(Math.random() * 1000))]; // pick a random word
-let letters = word.split("");  // create a char list of the selected word
 let lives = 6;
 let guessed_letters = [];   // empty list to keep track of guessed letters
 let display = Array(word.length).fill("_"); // display the current state of selected word
@@ -149,21 +148,40 @@ function new_guess(letter) {
 function display_hangman(num_lives) {
     switch (num_lives) {
         case 5:
+            draw_head();
             break;
         case 4:
+            draw_body();
             break;
         case 3:
+            draw_left_arm();
             break;
         case 2:
+            draw_right_arm();
             break;
         case 1:
+            draw_left_leg();
             break;
         case 0:
+            draw_right_leg();
             break;
         default:
-            break;
+            draw_gallows();
     }
     return;
 }
 
-console.log("%s", word);
+function run_hangman(num_lives) {
+    if (num_lives > 0){
+        display_hangman();
+        // Event listener to  take in keyboard input, and assign value to guess
+        document.addEventListener("keydown", (e) => {
+            const guess = e.key.toLowerCase();
+            if (guess >= 'a' && guess <= 'z') {     // input validation for letters only
+                new_guess(guess);
+            }
+        });
+    } else {
+        return;
+    }
+}

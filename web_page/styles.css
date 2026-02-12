@@ -216,3 +216,12 @@ class: CS3300
         color: black;
     }
 }
+
+/*Games*/
+
+/*Hangman*/
+.hangman_canvas canvas {
+    border: 2px solid #FFED29;
+    background-color: white;
+
+}

@@ -181,7 +181,10 @@ function run_hangman(num_lives) {
                 new_guess(guess);
             }
         });
+        run_hangman(lives);
     } else {
         return;
     }
 }
+
+run_hangman(lives);

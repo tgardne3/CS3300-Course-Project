@@ -1,13 +1,5 @@
 const { jsx } = require("react/jsx-runtime");
 
-// // Event listener to  take in keyboard input, and assign value to guess
-// document.addEventListener("keydown", (e) => {
-//     const guess = e.key.toLowerCase();
-//     if (guess >= 'a' && guess <= 'z') {     // input validation for letters only
-//         new_guess(guess);
-//     }
-// });
-
 // List of possible words
 let words = [
   "a","ability","able","about","above","accept","according","account","across",
@@ -142,6 +134,7 @@ function new_guess(letter) {
         lives--;
     }
     guessed_letters.push(letter);
+    update_display();
     return;
 }
 
@@ -171,8 +164,16 @@ function display_hangman(num_lives) {
     return;
 }
 
+function update_display() {
+    document.getElementById("wordDisplay").textContent = display.join("  ");
+
+    document.getElementById("guessedLetters").textContent = 
+        "Guessed: " + guessed_letters.join(", ");
+}
+
 function run_hangman(num_lives) {
     if (num_lives > 0){
+        update_display
         display_hangman();
         // Event listener to  take in keyboard input, and assign value to guess
         document.addEventListener("keydown", (e) => {
@@ -186,5 +187,3 @@ function run_hangman(num_lives) {
         return;
     }
 }
-
-run_hangman(lives);

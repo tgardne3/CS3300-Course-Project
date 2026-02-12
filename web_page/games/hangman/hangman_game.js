@@ -1,12 +1,12 @@
 const { jsx } = require("react/jsx-runtime");
 
-// Event listener to  take in keyboard input, and assign value to guess
-document.addEventListener("keydown", (e) => {
-    const guess = e.key.toLowerCase();
-    if (guess >= 'a' && guess <= 'z') {     // input validation for letters only
-        new_guess(guess);
-    }
-});
+// // Event listener to  take in keyboard input, and assign value to guess
+// document.addEventListener("keydown", (e) => {
+//     const guess = e.key.toLowerCase();
+//     if (guess >= 'a' && guess <= 'z') {     // input validation for letters only
+//         new_guess(guess);
+//     }
+// });
 
 // List of possible words
 let words = [

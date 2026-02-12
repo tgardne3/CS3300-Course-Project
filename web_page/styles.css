@@ -148,7 +148,7 @@ class: CS3300
     background-color: darkgray;
 }
 .user-form button {
-    animation: submission_button ease-out 0.60s;
+    animation: submission_button ease-out 0.50s;
     margin: 0 auto;
     width: 120px;
     height: 40px;
@@ -189,28 +189,19 @@ class: CS3300
 /*Form Submissison Buttons*/
 @keyframes submission_button {
     from {
-        width: 60px;
-        height: 20px;
-        border-radius: 10px;
-        font-size: 10px;
+        transform: scale(0.95);
         justify-content: center;
         background-color: #000000;
         color: #FFED29; 
     }
     50% {
-        width: 140px;
-        height: 50px;
-        border-radius: 25px;
-        font-size: 25px;
+        transform: scale(1.125);
         justify-content: center;
         background-color: #7a733b;
         color: #7a733b;
     }
     to {
-        width: 120px;
-        height: 40px;
-        border-radius: 20px;
-        font-size: 20px;
+        transform: scale(1);
         justify-content: center;
         background-color: #FFED29;
         color: black;

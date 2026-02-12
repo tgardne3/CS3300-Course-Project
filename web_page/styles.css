@@ -5,12 +5,12 @@ class: CS3300
 
 /*Home Page*/
 .homepage {
-    background: linear-gradient(45deg, #141414, #19232a);
-    height: 100%;
-    margin: 0;
+    animation: background_shimmer ease-in-out 1s;
+    animation-iteration-count: 1;
+    background: linear-gradient(45deg,#141414 0%, #19232a 50%,  rgb(52, 52, 52) 75%, #141414 100%);
+    background-size: 400% 200%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
 }
 .homepage h1 {
     font-size: 40px;
@@ -208,7 +208,14 @@ class: CS3300
     }
 }
 
-
+@keyframes background_shimmer {
+    0% {
+        background-position: 100% center;
+    }
+    50% {
+        backgound-position: -100% center;
+    }
+}
 
 /*Games*/
 

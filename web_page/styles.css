@@ -86,6 +86,10 @@ table, th, td{
     
 }
 
+.leaderboard-container label {
+    margin-top: 20px;
+}
+
 /*Games List*/
 
 /*List Container*/

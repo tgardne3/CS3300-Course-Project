@@ -23,10 +23,13 @@ function game_search() {
             switch (search_value) {
                 case 'hangman':
                     window.location.href = "./games/hangman/hangman.html";
+                    break;
                 case 'snake':
                     window.location.href = "./games/snake/snake.html";
+                    break;
                 case 'typing test':
                     window.location.href = "./games/typing_test/typing_test.html";
+                    break;
             }
 
         }

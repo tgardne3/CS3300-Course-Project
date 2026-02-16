@@ -69,12 +69,13 @@ class: CS3300
     display: flex;
     flex-direction: column;
     background-color: rgb(252, 234, 143);
-    width: 300px;
+    width: 280px;
     border-radius: 10px;
     text-align: center;
     color: black;
     margin: 20px;
     font-size: 22px;
+    justify-content: center;
 }
 
 table, th, td{

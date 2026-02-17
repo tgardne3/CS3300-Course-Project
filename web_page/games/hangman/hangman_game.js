@@ -117,11 +117,13 @@ let words = [
   "yes","yet","you","young","your","yourself"
 ];
 
-// assign and declare variables
-let word = words[(Math.floor(Math.random() * 1000))]; // pick a random word
-let lives = 6;
-let guessed_letters = [];   // empty list to keep track of guessed letters
-let display = Array(word.length).fill("_"); // display the current state of selected word
+// Event listener to  take in keyboard input, and assign value to guess
+function handleKeyPress(e) {
+    const guess = e.key.toLowerCase();
+    if (guess >= 'a' && guess <= 'z') {     // input validation for letters only
+        new_guess(guess);
+    }
+}
 
 function new_guess(letter) {
     if (word.includes(letter)) {
@@ -132,10 +134,19 @@ function new_guess(letter) {
         } 
     } else {
         lives--;
+        display_hangman(lives);
     }
-    guessed_letters.push(letter);
-    update_display();
-    return;
+    if (lives === 0) {
+        alert("Game Over!");
+        document.removeEventListener("keydown", handleKeyPress);
+    } else if (!display.includes("_")) {
+        alert("You Win!");
+        document.removeEventListener("keydown", handleKeyPress);
+    } else {
+        guessed_letters.push(letter);
+        update_display();
+        return;
+    }
 }
 
 function display_hangman(num_lives) {
@@ -171,19 +182,15 @@ function update_display() {
         "Guessed: " + guessed_letters.join(", ");
 }
 
-function run_hangman(num_lives) {
-    if (num_lives > 0){
-        update_display
-        display_hangman();
-        // Event listener to  take in keyboard input, and assign value to guess
-        document.addEventListener("keydown", (e) => {
-            const guess = e.key.toLowerCase();
-            if (guess >= 'a' && guess <= 'z') {     // input validation for letters only
-                new_guess(guess);
-            }
-        });
-        run_hangman(lives);
-    } else {
-        return;
-    }
+function run_hangman() {
+
+    // assign and declare variables
+    let word = words[(Math.floor(Math.random() * 1000))]; // pick a random word
+    let lives = 6;
+    let guessed_letters = [];   // empty list to keep track of guessed letters
+    let display = Array(word.length).fill("_"); // display the current state of selected word
+    update_display();
+    display_hangman();
+
+    document.addEventListener("keydown". handleKeyPress);
 }

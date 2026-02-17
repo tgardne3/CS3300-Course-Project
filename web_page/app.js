@@ -13,13 +13,24 @@ function game_search() {
         if (event.key === 'Enter') {
 
             //capture search key value
-            const search_value = search.value;
+            const search_value = search.value.toLowerCase();
             //debugging print line
             console.log("enter key pressed: ", search_value);
             //clearing input
             search.value = '';
 
             //search games and display results...
+            switch (search_value) {
+                case 'hangman':
+                    window.location.href = "./games/hangman/hangman.html";
+                    break;
+                case 'snake':
+                    window.location.href = "./games/snake/snake.html";
+                    break;
+                case 'typing test':
+                    window.location.href = "./games/typing_test/typing_test.html";
+                    break;
+            }
 
         }
     });

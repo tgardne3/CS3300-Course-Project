@@ -27,8 +27,8 @@ function game_search() {
                 case 'snake':
                     window.location.href = "./games/snake/snake.html";
                     break;
-                case 'typing test':
-                    window.location.href = "./games/typing_test/typing_test.html";
+                case 'type sprint':
+                    window.location.href = "./games/type_sprint/type_sprint.html";
                     break;
             }
 

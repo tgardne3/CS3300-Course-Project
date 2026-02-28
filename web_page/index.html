@@ -35,7 +35,7 @@ class: CS3300
 
 </head>
 
-<body class="homepage" onload="game_search()">
+<body class="homepage">
     <!--HEADER-->
     <div class="header-container">
         <!--Left Section-->
@@ -96,53 +96,9 @@ class: CS3300
             <input type="text" id="game_search" placeholder="Search games..." autocomplete="off" />
         </div>
 
-        <div class="list-container">
+        <div class="list-container" id="list-container"></div>
 
-            <div class="games-list">
-                <div class="game">
-                    <label for="hangman">Hangman</label>
-                    <a href="./games/hangman/hangman.html">
-                        <img src="./images/test_game_image.jpeg" alt="...test game image..." />
-                    </a>
-                </div>
-                <div class="game">
-                    <label for="snake">Snake</label>
-                    <a href="./games/snake/snake.html">
-                        <img src="./images/test_game_image.jpeg" alt="...test game image..." />
-                    </a>
-                </div>
-            </div>
-
-            <div class="games-list">
-                <div class="game">
-                    <label for="test_game">Type Sprint</label>
-                    <a href="./games/type_sprint/type_sprint.html">
-                        <img src="./images/test_game_image.jpeg" alt="...test game image..." />
-                    </a>
-                </div>
-                <div class="game">
-                    <label for="test_game">Test Game(4)</label>
-                    <a href="./games/game_4/test_game-4.html">
-                        <img src="./images/test_game_image.jpeg" alt="...test game image..." />
-                    </a>
-                </div>
-            </div>
-            <div class="games-list">
-                <div class="game">
-                    <label for="test_game">Test Game (5)</label>
-                    <a href="./games/games_5/test_game-5.html">
-                        <img src="./images/test_game_image.jpeg" alt="...test game image..." />
-                    </a>
-                </div>
-                <div class="game">
-                    <label for="test_game">Test Game (6)</label>
-                    <a href="./games/games_6/test_game-6.html">
-                        <img src="./images/test_game_image.jpeg" alt="...test game image..." />
-                    </a>
-                </div>
-            </div>
-        </div>
-
+            <script src="search.js"></script>
     </div>
     <div class="about">
         <h2>About the Developers:</h2>

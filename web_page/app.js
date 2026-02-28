@@ -3,38 +3,6 @@ names: Azam, Brandon, David, Trey
 class: CS3300
 */
 
-//Will probably replace with REACT implementation
-function game_search() {
-    const search = document.getElementById("game_search");
-
-    //captures "Enter" key for searching
-    search.addEventListener('keydown', (event) => {
-        //if Enter is pressed
-        if (event.key === 'Enter') {
-
-            //capture search key value
-            const search_value = search.value.toLowerCase();
-            //debugging print line
-            console.log("enter key pressed: ", search_value);
-            //clearing input
-            search.value = '';
-
-            //search games and display results...
-            switch (search_value) {
-                case 'hangman':
-                    window.location.href = "./games/hangman/hangman.html";
-                    break;
-                case 'snake':
-                    window.location.href = "./games/snake/snake.html";
-                    break;
-                case 'type sprint':
-                    window.location.href = "./games/type_sprint/type_sprint.html";
-                    break;
-            }
-
-        }
-    });
-}
 
 //collect and store data when submit button is clicked
 function sign_up() {

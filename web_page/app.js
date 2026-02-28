@@ -32,15 +32,4 @@ function sign_in() {
 
     //AZAM: VERIFY USERNAME + PASSWORD WITH DB
     console.log("Verify Info: ", {username, password});//print debugging
-
-    redirect_to_home();
 }
-
-
-//redirecting to home page () second delay
-function redirect_to_home() {
-    setTimeout(() => {
-        window.location.href = "index.html"
-    }, 2000);
-
-}//successful redirect

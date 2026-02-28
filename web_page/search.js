@@ -1,9 +1,6 @@
 //name: Azam, Brandon, David, Trey
 //class: CS3300
 
-//I know that there are duplicates of this function in app.js
-//i will condense these duplicates when everything is fully functional
-
 //game searching script
 
 let all_games = [

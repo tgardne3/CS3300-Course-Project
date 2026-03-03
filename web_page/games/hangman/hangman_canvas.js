@@ -79,3 +79,7 @@ function draw_right_leg() {
     ctx.stroke();
 }
 
+function clear_canvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+

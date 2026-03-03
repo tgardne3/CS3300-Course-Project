@@ -194,6 +194,9 @@ function update_display() {
 
 function run_hangman() {
 
+    //clearing previous game ran
+    clear_canvas();
+
     // assign variables
     word = words[Math.floor(Math.random() * words.length)]; // pick a random word   
     word = word.toLowerCase();  // make word lowercase

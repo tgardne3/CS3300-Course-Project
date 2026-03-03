@@ -167,6 +167,12 @@ table, th, td{
 }
 /*END Games List*/
 
+/* Game Pages */
+
+/* Hangman HTML */
+.game-display {
+    text-align: center;
+}
 
 /*User Form*/
 .user-form {

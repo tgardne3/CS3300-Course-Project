@@ -9,6 +9,6 @@
 //redirecting to home page (3) second delay
 function redirect_to_home() {
     setTimeout(function() {
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
     }, 2100);
 }

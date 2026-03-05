@@ -1,34 +1,26 @@
 // Declare variables
+let end_game = false;
+
 let snake = [
     {x: 5, y: 10},
     {x: 4, y: 10},
     {x: 3, y: 10}
 ];
-let current_direction = "r";
 
-// Create event listener and, keypress logic
-// Event listener to track arrow keys
-document.addEventListener("keydown", (event) => {
-    const arrowKeys = {
-        ArrowUp: "u",
-        ArrowDown: "d",
-        ArrowRight: "r",
-        ArrowLeft: "l"
-    };
+let boundries = new Set();
+boundries = ([
+    "0,0", "1,0", "2,0", "3,0", "4,0", "5,0", "6,0", "7,0", "8,0", "9,0", "10,0", "11,0", // top wall
+    "0,1", "0,2", "0,3", "0,4", "0,5", "0,6", "0,7", "0,8", "0,9", "0,10",  // left wall
+    "11,1", "11,2", "11,3", "11,4", "11,5", "11,6", "11,7", "11,8", "11,9", "11,10", // right wall
+    "0,11", "1,11", "2,11", "3,11", "4,11", "5,11", "6,11", "7,11", "8,11", "9,11", "10,11", "11,11", // bottom wall
+])
 
-    const new_direction = arrowKeys[event.key];
-    if (!new_direction) return      // ignore all keys other than arrow keys
-    
-    if (
-        (current_direction === "u" && new_direction === "d") ||
-        (current_direction === "d" && new_direction === "u") ||
-        (current_direction === "r" && new_direction === "l") ||
-        (current_direction === "l" && new_direction === "r")
-    ) {
-        return;  // ignore key press if opposite direction is pressed
-    }
-    current_direction = new_direction; // keypress is valid, change direction
-});
+let snake_set = new Set();
+snake_set = ([
+    "5,10",
+    "4,10",
+    "3,10",
+])
 
 // Function to get the immidate next square
 function next_head(direction) {
@@ -51,16 +43,51 @@ function next_head(direction) {
 }
 // Function to move the snake
 function move_snake(direction) {
-    snake.unshift(next_head(direction));
-    snake.pop();
+    const new_head = next_head(direction);
+    const new_set_key = `${new_Head.x},${new_Head.y}`;
+
+    detect_collision(new_set_key);
+
+    // add new head
+    snake.unshift(new_head);
+    snake_set.add(new_set_key);
+
+    // remove tail
+    const tail = snake.pop();
+    snake_set.delete(`${tail.x},${tail.y}`);
 }
 
 // Function to grow the snake
-function grow_snake() {
-    snake.unshift(next_head(current_direction));
+function grow_snake(direction) {
+    const new_head = next_head(direction);
+    const new_set_key = `${new_Head.x},${new_Head.y}`;
+
+    detect_collision(new_set_key);
+
+    // add new head
+    snake.unshift(new_head);
+    snake_set.add(new_set_key);
 }
 
-// Function to run the game
-function run_snake() {
+// Function to detect collisions
+function detect_collision(head) {
+    if (snake_set.has(head)) {
+        end_game = true;
+        return;
+    }
+    if (boundries.has(head)) {
+        end_game = true;
+        return;
+    }
+    return;
+}
+
+// Function to tell the render.js if game is over
+function is_game_over() {
+    return end_game;
+}
+
+// Function to spawn fruit in random location
+function spawn_fruit(snake_set) {
     return;
 }

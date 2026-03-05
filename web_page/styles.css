@@ -51,6 +51,7 @@ class: CS3300
     text-align: center;
     flex: 1;
     white-space: nowrap;
+    flex-direction: row;
     margin-top: 40px;
     
 }

@@ -1,7 +1,14 @@
 //name: Azam, Brandon, David, Trey
 //class: CS3300
 
-leaderboard_data = [];
+leaderboard_data = [
+    {game: "HangMan", score: "NA", player: "NA"},
+    {game: "Snake Game", score: "NA", player: "NA"},
+    {game: "Type Sprint", score: "NA", player: "NA"},
+    {game: "Light Racer", score: "NA", player: "NA"},
+    {game: "...Online...", score: "NA", player: "NA"},
+    {game: "Land Mine", score: "NA", player: "NA"},
+];
 
 document.addEventListener("DOMContentLoaded", function () {
     display_leaderboard(leaderboard_data);
@@ -16,14 +23,15 @@ function display_leaderboard(leaderboard_data) {
 
     //if no leaderboard data
     if(leaderboard_data.length === 0) {
-        const high_score = `
+        const high_score = document.createElement('tr');
+        high_score.innerHTML =  `
         <tr>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>N/A</td>
+            <td>oooops</td>
+            <td>we broke</td>
+            <td>something</td>
         </tr>
         `;
-        container.insertAdjacentHTML('beforeend', high_score);
+        container.appendChild(high_score);
         return;
     }
 

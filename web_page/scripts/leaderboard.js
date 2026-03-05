@@ -39,7 +39,7 @@ function display_leaderboard(leaderboard_data) {
         <td>${data.player}</td>
         `;
 
-        container.appendChild('beforeend', high_score);
+        container.appendChild(high_score);
     });
 
 

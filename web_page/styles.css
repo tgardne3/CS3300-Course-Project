@@ -41,6 +41,11 @@ class: CS3300
     flex-direction: row;
     margin: 8px;
 }
+
+.left-header h2 {
+    font-size: 30px;
+}
+
 .left-header img {
     width: 50px;
     height: 50px;
@@ -65,6 +70,7 @@ class: CS3300
     flex: 1;
     margin-top: 20px;
     margin-right: 25px;
+    font-size: 22px;
 }
 
 /*End Page Headers*/
@@ -93,6 +99,20 @@ table, th, td{
 
 .leaderboard-container label {
     margin-top: 20px;
+}
+
+.full-leaderboard-containers {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(252, 234, 143);
+    width: 800px;
+}
+
+.full-leaderboard-containers th {
+    font-size: 35px;
 }
 
 /*Games List*/

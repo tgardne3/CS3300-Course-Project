@@ -78,7 +78,7 @@ function draw_head(head, direction) {
         ctx.lineTo(x + cell_size, y + cell_size);
     }
 
-    if (direction === "r") {
+    if (direction === "r" || direction === "s") {
         ctx.moveTo(x + cell_size, y + center);
         ctx.lineTo(x, y);
         ctx.lineTo(x, y + cell_size);

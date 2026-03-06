@@ -43,6 +43,14 @@ function sign_up() {
     const password = document.getElementById('password').value;
     const password_check = document.getElementById('confirm_password').value;
 
+    // send password to db
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log("User created:", user);
+        })
+    
+
     //AZAM: STORE DATA IF PASSWORDS MATCH
     //store + process data here
 

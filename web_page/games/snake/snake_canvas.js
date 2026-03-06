@@ -3,7 +3,7 @@ const canvas = document.getElementById("snake_canvas");
 const ctx = canvas.getContext("2d");
 
 // Declare/define constants and variables
-const GRID_SIZE = 10; // 10x10 game board
+const GRID_SIZE = 12; // 10x10 game board
 let cell_size;
 
 // Functon to resize canvas

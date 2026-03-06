@@ -1,22 +1,22 @@
 // Declare variables
 let end_game = false;
 
+let fruit = {x: 8, y: 6};
+
 let snake = [
-    {x: 5, y: 10},
-    {x: 4, y: 10},
-    {x: 3, y: 10}
+    {x: 5, y: 6},
+    {x: 4, y: 6},
+    {x: 3, y: 6}
 ];
 
-let boundries = new Set();
-boundries = ([
+let boundaries = new Set([
     "0,0", "1,0", "2,0", "3,0", "4,0", "5,0", "6,0", "7,0", "8,0", "9,0", "10,0", "11,0", // top wall
     "0,1", "0,2", "0,3", "0,4", "0,5", "0,6", "0,7", "0,8", "0,9", "0,10",  // left wall
     "11,1", "11,2", "11,3", "11,4", "11,5", "11,6", "11,7", "11,8", "11,9", "11,10", // right wall
     "0,11", "1,11", "2,11", "3,11", "4,11", "5,11", "6,11", "7,11", "8,11", "9,11", "10,11", "11,11", // bottom wall
 ])
 
-let snake_set = new Set();
-snake_set = ([
+let snake_set = new Set([
     "5,10",
     "4,10",
     "3,10",
@@ -44,7 +44,7 @@ function next_head(direction) {
 // Function to move the snake
 function move_snake(direction) {
     const new_head = next_head(direction);
-    const new_set_key = `${new_Head.x},${new_Head.y}`;
+    const new_set_key = `${new_head.x},${new_head.y}`;
 
     detect_collision(new_set_key);
 
@@ -60,13 +60,15 @@ function move_snake(direction) {
 // Function to grow the snake
 function grow_snake(direction) {
     const new_head = next_head(direction);
-    const new_set_key = `${new_Head.x},${new_Head.y}`;
+    const new_set_key = `${new_head.x},${new_head.y}`;
 
     detect_collision(new_set_key);
 
     // add new head
     snake.unshift(new_head);
     snake_set.add(new_set_key);
+
+    fruit = spawn_fruit(snake_set);
 }
 
 // Function to detect collisions
@@ -89,6 +91,7 @@ function is_game_over() {
 
 // Function to spawn fruit in random location
 function spawn_fruit(snake_set) {
+
     let rand_x = Math.floor(Math.random() * 10);
     let rand_y = Math.floor(Math.random() * 10);
     let rand_set_key = `${rand_x},${rand_y}`;
@@ -97,7 +100,7 @@ function spawn_fruit(snake_set) {
         rand_x = Math.floor(Math.random() * 10);
         rand_y = Math.floor(Math.random() * 10);
 
-        rand_set_key = `${rand_x},${rand_y}`;
+        rand_set_key = {x: rand_x, y: rand_y};
     }
 
     return rand_set_key;

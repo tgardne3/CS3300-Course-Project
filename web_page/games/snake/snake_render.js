@@ -1,5 +1,7 @@
 // Declare variables
 let current_direction = "r";
+let game_loop;
+let next_square;
 
 // Create event listener and, keypress logic
 // Event listener to track arrow keys
@@ -28,7 +30,27 @@ document.addEventListener("keydown", (event) => {
 
 // Function for game loop
 function game_tick() {
+
+    next_square = next_head(current_direction);
+
+    // Fruit collision
+    if (next_square.x === fruit.x && next_square.y === fruit.y) {
+        grow_snake(current_direction);
+    } else {
+        move_snake(current_direction);
+    }
     move_snake(current_direction);
-    detect_collision(current_direction);
+
+    if (is_game_over()) {
+        clearInterval(game_loop);
+        return;
+    }
+
     draw_game();
+}
+
+// Function to run the game
+function run_snake() {
+    draw_game();
+    game_loop = setInterval(game_tick, 200);
 }

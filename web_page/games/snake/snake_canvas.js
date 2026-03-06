@@ -23,7 +23,7 @@ resize_canvas();
 window.addEventListener("resize", resize_canvas);
 
 // Function to draw the boundries
-function draw_boundries() {
+function draw_boundaries() {
     ctx.fillStyle = "green";
 
     for (let x = 0; x < 12; x++) {
@@ -32,8 +32,8 @@ function draw_boundries() {
     }
 
     for (let y = 1; y < 11; y++) {
-        draw_cell(y, 0); // left
-        draw_cell(y, 11); // right
+        draw_cell(0, y); // left
+        draw_cell(11, y); // right
     }
 
     return;
@@ -62,14 +62,14 @@ function draw_grid() {
 
         // vertical
         ctx.beginPath();
-        ctx.moveTo(pos, 0);
-        ctx.lineTo(pos, canvas.height);
+        ctx.moveTo(position, 0);
+        ctx.lineTo(position, canvas.height);
         ctx.stroke();
 
         // horizontal
         ctx.beginPath();
-        ctx.moveTo(0, pos);
-        ctx.lineTo(canvas.width, pos);
+        ctx.moveTo(0, position);
+        ctx.lineTo(canvas.width, position);
         ctx.stroke();
     }
 }
@@ -81,9 +81,15 @@ function draw_cell(x, y) {
 
 // Function to draw the game
 function draw_game() {
+    clear_canvas();
     draw_grid();
-    draw_boundries();
+    draw_boundaries();
     draw_snake(snake);
-    draw_fruit(spawn_fruit());
+    draw_fruit(fruit);
     return;
+}
+
+// Function to clear canvas
+function clear_canvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 }

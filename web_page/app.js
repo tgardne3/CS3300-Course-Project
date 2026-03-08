@@ -10,6 +10,9 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase
 // from other script files
 import { redirect_to_home } from "./scripts/auto_redirections"; 
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -27,30 +30,37 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const auth = getAuth(app);
+
+
+
+
 
 
 //collect and store data when submit button is clicked
 function sign_up() {
-    const username = document.getElementById('username').value;
+    const email = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const password_check = document.getElementById('confirm_password').value;
+
+    // send password to db
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log("User created:", user);
+        })
+    
+
+    //AZAM: STORE DATA IF PASSWORDS MATCH
+    //store + process data here
 
     if (password == password_check) {
         //redirecting to success page
         console.log("User data collected: ", {username, password});//print debugging
-        const email = `${username}@GameHub.io`;
+        window.location.href = "successful-sign-up.html";
 
         //send to firebase
-        createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          const user = userCredential.user;
-          console.log("User created:", user);//debugging (user info post creation)
-        })
-        
-        //after successfully creating user account
-        window.location.href = "successful-sign-up.html";
+
     }
     else {
         console.log("passwords don't match");

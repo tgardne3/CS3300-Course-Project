@@ -29,11 +29,17 @@ class: CS3300
     <div class="game-display">
       <canvas id="snake_canvas" width="400" height="400"></canvas>
     </div>
+    <div class="game-message" id="game_message">
+      Press an arrow key to start
+    </div>
+    <div class="snake_score">
+      Score: <span id="snake_score"></span>
+    </div>
 
     <!--button-->
     <br/><br/>
     <div class="user-form">
-      <button onclick="run_snake()">Start</button>
+      <button onclick="run_snake()">Reset</button>
     </div>
     <br/><br/>
     <script src="snake_game.js"></script>

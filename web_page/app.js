@@ -36,50 +36,44 @@ const auth = getAuth(app);
 
 
 //collect and store data when submit button is clicked
-function sign_up() {
-    const email = document.getElementById('username').value;
+async function sign_up() {
+    const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const password_check = document.getElementById('confirm_password').value;
 
-    // send password to db
-      createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          const user = userCredential.user;
-          console.log("User created:", user);
-        });
+    const email = `${username}@GameHub.io`;
+
+    //if passwords don't match don't create account!
+    if (password !== password_check) {
+      alert("Passwords DON'T match!");
+      return;
+    }
+    try {
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        console.log("User created:", userCredential.user);
+        window.location.href = "successful-sign-up.html"; // only runs on success
+    } catch (error) {
+        console.error("Sign up failed:", error.message);
+        alert("Sign up failed: " + error.message);
+    }
     
-
-    //AZAM: STORE DATA IF PASSWORDS MATCH
-    //store + process data here
-
-    if (password == password_check) {
-        //redirecting to success page
-        console.log("User data collected: ", {username, password});//print debugging
-        window.location.href = "successful-sign-up.html";
-
-        //send to firebase
-
-    }
-    else {
-        console.log("passwords don't match");
-        alert("Passwords DON'T match!")
-    }
 }//sign_in
 
 //signing in verification
-function sign_in() {
+async function sign_in() {
     //pull values
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
 
     //AZAM: VERIFY USERNAME + PASSWORD WITH DB
-    console.log("Verify Info: ", {username, password});//print debugging
+    console.log(`Verify Info: , ${username} - ${password}`);//print debugging
     const email = `${username}@GameHub.io`;
 
     try {
-      const userCredential = signInWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
+      //try user sign in and save returned object for verification
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;//use this variable for page states?
       // User is signed in
     } catch (error) {
       switch (error.code) {
@@ -104,7 +98,6 @@ function sign_in() {
     redirect_to_home();
   }
 
-    signInWithEmailAndPassword(auth, email, password);
 }
 
 

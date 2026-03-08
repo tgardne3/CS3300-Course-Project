@@ -11,7 +11,10 @@ class: CS3300
     <link rel="stylesheet" href="../styles.css" type="text/css" />
 
     <!--linking javascript file-->
-    <script src="../scripts/auto_redirections.js"></script>
+    <script type="module">
+      import { redirect_to_home } from "../scripts/auto_redirections.js";
+      window.onload = redirect_to_home;
+    </script>
 
 
     <title>Redirecting...</title>
@@ -19,7 +22,7 @@ class: CS3300
 
 
 
-  <body class="homepage" onload="redirect_to_home()">
+  <body class="homepage">
     <!--HEADER-->
     <div class="header-container">
       <div class="left-header"></div>

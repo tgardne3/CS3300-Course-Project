@@ -7,11 +7,9 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 
-
-
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -29,28 +27,30 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const auth = getAuth(app);
-
-
 
 
 
 
 //collect and store data when submit button is clicked
 function sign_up() {
-    const username = document.getElementById('username').value;
+    const email = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const password_check = document.getElementById('confirm_password').value;
 
+    if (password !== password_check) {
+      alert("Passwords do not match.");
+      return;
+    }
+  
     // send password to db
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
+
+          
           const user = userCredential.user;
           console.log("User created:", user);
-        })
-    
-
+          
     //AZAM: STORE DATA IF PASSWORDS MATCH
     //store + process data here
 
@@ -58,9 +58,8 @@ function sign_up() {
         //redirecting to success page
         console.log("User data collected: ", {username, password});//print debugging
         window.location.href = "successful-sign-up.html";
-
-        //send to firebase
-
+      
+        //send to firebase     
     }
     else {
         console.log("passwords don't match");

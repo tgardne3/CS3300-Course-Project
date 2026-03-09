@@ -153,5 +153,5 @@ const sign_up_button = document.getElementById('sign-up-button');
 const sign_in_button = document.getElementById('sign-in-button');
 
 //check if exists on page before creating listener
-if(sign_in_button) document.addEventListener('click', sign_in);
-if(sign_up_button) document.addEventListener('click', sign_up);
+if(sign_in_button) sign_in_button.addEventListener('click', sign_in);
+if(sign_up_button) sign_up_button.addEventListener('click', sign_up);

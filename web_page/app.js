@@ -119,7 +119,10 @@ async function sign_in() {
 
 //######### UI DIPLAY FUNCTIONS ##############
 
-function display_logged_in_UI() {
+function display_logged_in_UI(user) {
+
+  //getting username value:
+  const username = user.email.slice(0, -11);
 
   //this needs to be changed to specify index vs games page
   const nav = document.querySelector('nav');

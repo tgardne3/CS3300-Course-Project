@@ -148,6 +148,9 @@ function display_logged_out_UI() {
     nav.innerHTML = `
       <a href="./htmls/sign-in.html">Sign <b>In</b> |</a>
       <a href="./htmls/sign-up.html">Sign <b>Up</b></a> 
+      <a href="./htmls/account.html">
+        <img src="./images/settings_icon.png"></img>
+      </a>
     `
   }
 

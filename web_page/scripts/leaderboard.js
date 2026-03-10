@@ -16,12 +16,14 @@ full_leaderboard_data = [
     {game: "HangMan", rank: "3", score: "NA", player: "NA"},
     {game: "HangMan", rank: "4", score: "NA", player: "NA"},
     {game: "HangMan", rank: "5", score: "NA", player: "NA"},
+    {game: "HangMan", rank: "NA", score: "NA", player: "User"},
 
     {game: "Snake Game", rank: "1", score: "NA", player: "NA"},
     {game: "Snake Game", rank: "2", score: "NA", player: "NA"},
     {game: "Snake Game", rank: "3", score: "NA", player: "NA"},
     {game: "Snake Game", rank: "4", score: "NA", player: "NA"},
     {game: "Snake Game", rank: "5", score: "NA", player: "NA"},
+    {game: "Snake Game", rank: "NA", score: "NA", player: "User"},
 
 
     {game: "Type Sprint", rank: "1", score: "NA", player: "NA"},
@@ -29,24 +31,28 @@ full_leaderboard_data = [
     {game: "Type Sprint", rank: "3", score: "NA", player: "NA"},
     {game: "Type Sprint", rank: "4", score: "NA", player: "NA"},
     {game: "Type Sprint", rank: "5", score: "NA", player: "NA"},
+    {game: "Type Sprint", rank: "NA", score: "NA", player: "User"},
 
     {game: "Light Racer", rank: "1", score: "NA", player: "NA"},
     {game: "Light Racer", rank: "2", score: "NA", player: "NA"},
     {game: "Light Racer", rank: "3", score: "NA", player: "NA"},
     {game: "Light Racer", rank: "4", score: "NA", player: "NA"},
     {game: "Light Racer", rank: "5", score: "NA", player: "NA"},
+    {game: "Light Racer", rank: "NA", score: "NA", player: "User"},
 
     {game: "...Online...", rank: "1", score: "NA", player: "NA"},
     {game: "...Online...", rank: "2", score: "NA", player: "NA"},
     {game: "...Online...", rank: "3", score: "NA", player: "NA"},
     {game: "...Online...", rank: "4", score: "NA", player: "NA"},
     {game: "...Online...", rank: "5", score: "NA", player: "NA"},
+    {game: "...Online...", rank: "NA", score: "NA", player: "User"},
 
     {game: "Land Mine", rank: "1", score: "NA", player: "NA"},
     {game: "Land Mine", rank: "2", score: "NA", player: "NA"},
     {game: "Land Mine", rank: "3", score: "NA", player: "NA"},
     {game: "Land Mine", rank: "4", score: "NA", player: "NA"},
-    {game: "Land Mine", rank: "5", score: "NA", player: "NA"}
+    {game: "Land Mine", rank: "5", score: "NA", player: "NA"},
+    {game: "Land Mine", rank: "NA", score: "NA", player: "User"}
 
 ];
 

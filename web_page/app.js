@@ -7,7 +7,7 @@ class: CS3300
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 
 //import from firebase-auth
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"; 
 
 //import from firebase-analytics
@@ -116,6 +116,12 @@ async function sign_in() {
     }
 }
 
+function sign_out() {
+  signOut(auth);
+  window.location.href = "../index.html";
+}
+
+
 //######### UI DIPLAY FUNCTIONS ##############
 
 function display_logged_in_UI(user) {
@@ -151,7 +157,9 @@ function display_logged_out_UI() {
 // create button objects
 const sign_up_button = document.getElementById('sign-up-button');
 const sign_in_button = document.getElementById('sign-in-button');
+const sign_out_button = document.getElementById('sign-out-button');
 
 //check if exists on page before creating listener
 if(sign_in_button) sign_in_button.addEventListener('click', sign_in);
 if(sign_up_button) sign_up_button.addEventListener('click', sign_up);
+if(sign_out_button) sign_out_button.addEventListener('click', sign_out);

@@ -73,6 +73,12 @@ class: CS3300
     font-size: 22px;
 }
 
+
+.right-header img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
 /*End Page Headers*/
 
 /*Leaderboard*/

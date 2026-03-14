@@ -278,7 +278,41 @@ table, th, td{
     margin-left: 35px;
 }
 
+/*USER SETTINGS*/
 
+.user-settings {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.user-settings h2 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.error-message {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(252, 234, 143);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 350px;
+    height: 120px;
+}
+
+.error-message div {
+    background-color: rgb(85, 85, 85);
+    border-radius: 5px;
+    color: white;
+    height: 50px;
+    width: 330px;
+}
 /*Animations*/
 /*Submission Pages*/
 

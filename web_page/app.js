@@ -169,7 +169,12 @@ function display_logged_out_UI() {
     const user_settings = document.querySelector(".user-settings");
     if(user_settings) {
       user_settings.innerHTML = `
-        <h2>Sign In to See Account Settings</h2>
+        <div class="error-message">
+          <h2>It looks like you're not signed in...</h2>
+          <div>
+            <p>please <a href="sign-in.html">sign in</a> to have access to account settings</p>
+          </div>
+        </div>
       `;
     }
 

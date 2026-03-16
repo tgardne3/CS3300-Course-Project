@@ -147,7 +147,7 @@ function display_logged_in_UI(user) {
       <div class="user-settings-content">
         <div class="account-info">
           <h2> Username: </h2>
-          <input placeholder="${username}/>
+          <input placeholder="${username}"/>
         </div>
         <div class="user-form">
           <button type="button" id="sign-out-button">Sign Out</button>

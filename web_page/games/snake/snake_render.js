@@ -69,7 +69,7 @@ function run_snake() {
     game_loop = setInterval(game_tick, 200);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+window.onload = function () {
     run_snake();
-});
+};
 

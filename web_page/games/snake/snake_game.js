@@ -128,7 +128,7 @@ function spawn_fruit(snake_set) {
 // Function to reset the game
 function reset_game() {
     end_game = false;
-    score_saved = false //this should allow resaves
+    score_saved = false; //this should allow resaves
     
     fruit = {x: 8, y: 6};  // set fruit to default spot
 

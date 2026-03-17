@@ -1,3 +1,5 @@
+import { reset_game, is_game_over, move_snake, grow_snake, fruit, snake } from "./snake_game.js"; // import what i just exported from snakegame.js
+
 // Declare variables
 let current_direction = "s";
 let game_loop;

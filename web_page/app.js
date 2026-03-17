@@ -129,6 +129,16 @@ function display_logged_in_UI(user) {
   //getting username value:
   const username = user.email.slice(0, -11);
 
+  //when display_name is implemented in database
+  /*
+  if(user.DisplayName) {
+    const display_name = user.DisplayName;
+  }
+  else {
+    const display_name = username; 
+  }
+  */
+
   //############## PAGE NAVIGATION ##################### 
   const nav = document.querySelector('nav');
   if (nav) {
@@ -146,11 +156,83 @@ function display_logged_in_UI(user) {
     user_settings.innerHTML = `
       <div class="user-settings-content">
         <div class="account-info">
+
+          <h1> Change Account Info... </h1>
+
+          <hr>
+
           <h2> Username: </h2>
           <input placeholder="${username}"/>
+
+          <h2> Password: </h2>
+          <input placeholder="************"/>
+
+          <h2> Display Name: </h2>
+          <input placeholder="${username}"/>
+
+          <button style="margin-top: 1em" type="button" id="save-changes">Save Changes</button>
+ 
+          <h1 style="margin-top: 2em;"> My High Scores: </h1>
+
         </div>
+
+        <hr>
+
+        <div class="leaderboard">
+          <table>
+            <thead>
+              <tr span="2">
+                <th> Game </th>
+                <th> Score (highest)</th>
+                <th> Score (Average)</th>
+                <th> Global Rank </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>HangMan</td>
+                <td> N/A </td>
+                <td> N/A </td>
+                <td> N/A </td>
+              </tr>
+              <tr>
+                <td>Snake</td>
+                <td> N/A </td>
+                <td> N/A </td>
+                <td> N/A </td>
+              </tr>
+              <tr>
+                <td>TypeSprint</td>
+                <td> N/A </td>
+                <td> N/A </td>
+                <td> N/A </td>
+              </tr> 
+              <tr>
+                <td>LightRacer</td>
+                <td> N/A </td>
+                <td> N/A </td>
+                <td> N/A </td>
+              </tr> 
+              <tr>
+                <td>...Online...</td>
+                <td> N/A </td>
+                <td> N/A </td>
+                <td> N/A </td>
+              </tr>
+              <tr>
+                <td>LandMind</td>
+                <td> N/A </td>
+                <td> N/A </td>
+                <td> N/A </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr>
+
         <div class="user-form">
-          <button type="button" id="sign-out-button">Sign Out</button>
+          <button style="margin-top: 1em;" type="button" id="sign-out-button">Sign Out</button>
         </div>
       </div>
     `;

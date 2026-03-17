@@ -287,7 +287,6 @@ table, th, td{
     justify-content: center;
     align-items: center;
     text-align: center;
-    
 }
 
 .user-settings h2 {
@@ -303,12 +302,33 @@ table, th, td{
     color: white;
 }
 
+.user-settings-content hr {
+    width: 450px;
+}
+
+.user-settings-content button {
+    animation: submission_button ease-out 0.50s;
+    margin: 0 auto;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    justify-content: center;
+    background-color: #FFED29;
+    color: black;
+}
+
+.user-settings-content table {
+    color: black;
+}
+
 .account-info {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width: 400px;
 }
 
 .account-info input {
@@ -319,6 +339,10 @@ table, th, td{
     font-size: 19px;
     width: 200px;
     margin: 10px;
+}
+
+.account-info h1 {
+    font-size: 25px;
 }
 
 .error-message {

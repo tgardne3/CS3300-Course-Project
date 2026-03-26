@@ -153,6 +153,13 @@ function display_logged_in_UI(user) {
   //############## ACCOUNT SETTINGS ####################
   const user_settings = document.querySelector(".user-settings")
   if (user_settings) {
+
+    const admin_button = `
+      <div class="user-form">
+        <button style="width: 200px; margin-top: 2em;" type="button" id="documentation">Get Documentation</button>
+      </div>
+    `;
+
     user_settings.innerHTML = `
       <div class="user-settings-content">
         <div class="account-info">
@@ -199,7 +206,7 @@ function display_logged_in_UI(user) {
                 <td>Snake</td>
                 <td> N/A </td>
                 <td> N/A </td>
-                <td> N/A </td>
+                <td> N/A </td>j
               </tr>
               <tr>
                 <td>TypeSprint</td>
@@ -236,6 +243,9 @@ function display_logged_in_UI(user) {
         </div>
       </div>
     `;
+    if(/^admin\d$/.test(username)) {
+        user_settings.innerHTML += admin_button;
+    }
      document.getElementById("sign-out-button").addEventListener("click", sign_out);
   }
 }

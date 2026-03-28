@@ -213,6 +213,10 @@ table, th, td{
     color: black;
     margin-top: 20px;
 }
+
+.navigation a {
+    color: black;
+}
 /*END Games List*/
 
 /* Game Pages */
@@ -363,6 +367,12 @@ table, th, td{
     height: 50px;
     width: 330px;
 }
+
+.error-message a {
+    color: #FFED29;
+}
+
+
 
 /*Documentation Section*/
 

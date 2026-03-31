@@ -1,4 +1,5 @@
-import { reset_game, is_game_over, move_snake, grow_snake, fruit, snake } from "./snake_game.js"; // import what i just exported from snakegame.js
+import { reset_game, is_game_over, move_snake, grow_snake, next_head, fruit, snake } from "./snake_game.js"; // import what i just exported from snakegame.js
+import  { draw_game } from "./snake_canvas.js";
 
 // Declare variables
 let current_direction = "s";
@@ -56,7 +57,7 @@ function game_tick() {
         return;
     }
 
-    draw_game();
+    draw_game(snake, fruit, current_direction);
 }
 
 // Function to run the game
@@ -65,11 +66,8 @@ function run_snake() {
     clearInterval(game_loop);
     reset_game();
 
-    draw_game();
+    draw_game(snake, fruit, current_direction);
     game_loop = setInterval(game_tick, 200);
 }
 
-window.onload = function () {
-    run_snake();
-};
-
+run_snake();

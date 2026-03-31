@@ -1,3 +1,5 @@
+export { draw_game };
+
 // initalize canvas
 const canvas = document.getElementById("snake_canvas");
 const ctx = canvas.getContext("2d");
@@ -121,7 +123,7 @@ function draw_cell(x, y) {
 }
 
 // Function to draw the game
-function draw_game() {
+function draw_game(snake, fruit, current_direction) {
     clear_canvas();
     draw_grid();
     draw_boundaries();

@@ -207,7 +207,7 @@ function display_logged_in_UI(user) {
                 <td>Snake</td>
                 <td> N/A </td>
                 <td> N/A </td>
-                <td> N/A </td>j
+                <td> N/A </td>
               </tr>
               <tr>
                 <td>TypeSprint</td>

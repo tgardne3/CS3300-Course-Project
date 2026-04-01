@@ -1,10 +1,11 @@
-import { db } from "../../scripts/firebase-init.js";
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"; 
+// import { db } from "../../scripts/firebase-init.js";
+// import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"; 
+import { set_current_direction } from "./snake_render.js";
 export { reset_game, is_game_over, move_snake, grow_snake, next_head, fruit, snake }; // add export to import it into reder file to get around issue
 
 // Declare variables
 let end_game = false;
-let score_saved = false;
+// let score_saved = false;
 
 let fruit = {x: 8, y: 6}; // initial fruit spawn
 
@@ -129,7 +130,7 @@ function spawn_fruit(snake_set) {
 // Function to reset the game
 function reset_game() {
     end_game = false;
-    score_saved = false; //this should allow resaves
+    // score_saved = false; //this should allow resaves
     
     fruit = {x: 8, y: 6};  // set fruit to default spot
 
@@ -145,7 +146,7 @@ function reset_game() {
     "3,6",
     ])
 
-    current_direction = "s";
+    set_current_direction("s");
 
     score = 3;
     update_score_display();

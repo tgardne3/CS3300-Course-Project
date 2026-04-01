@@ -1,10 +1,13 @@
 import { reset_game, is_game_over, move_snake, grow_snake, next_head, fruit, snake } from "./snake_game.js"; // import what i just exported from snakegame.js
 import  { draw_game } from "./snake_canvas.js";
+export { set_current_direction };
 
 // Declare variables
 let current_direction = "s";
 let game_loop;
 let next_square;
+
+document.getElementById("resetButton").addEventListener("click", run_snake);
 
 // Create event listener and, keypress logic
 // Event listener to track arrow keys
@@ -34,8 +37,17 @@ document.addEventListener("keydown", (event) => {
     current_direction = new_direction; // keypress is valid, change direction
 });
 
+// Helper function to set current_direction
+function set_current_direction(direction) {
+    current_direction = direction;
+}
+
 // Function for game loop
 function game_tick() {
+
+    if (current_direction === "s") {
+        return;
+    }
 
     next_square = next_head(current_direction);
 

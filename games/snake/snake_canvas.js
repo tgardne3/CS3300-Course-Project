@@ -1,4 +1,4 @@
-export { draw_game };
+export { draw_game, snake_colors };
 
 // initalize canvas
 const canvas = document.getElementById("snake_canvas");
@@ -90,10 +90,11 @@ function rgbToHex(red, green, blue) {
         green.toString(16).padStart(2, "0") +
         blue.toString(16).padStart(2, "0");
 }
-// Function to draw the snake
-function draw_snake(snake, direction) {
 
-    let snake_colors = cycle_colors(snake.length);
+let snake_colors = cycle_colors(100); // initalize a list so that one is not generated every tic
+
+// Function to draw the snake
+function draw_snake(snake, direction, snake_colors) {
 
     for (let i = 1; i < snake.length; i++) {
         ctx.fillStyle = snake_colors[i];
@@ -179,7 +180,7 @@ function draw_game(snake, fruit, current_direction) {
     clear_canvas();
     draw_grid();
     draw_boundaries();
-    draw_snake(snake, current_direction);
+    draw_snake(snake, current_direction, snake_colors);
     draw_fruit(fruit);
     return;
 }

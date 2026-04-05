@@ -155,7 +155,7 @@ function display_logged_in_UI(user) {
   if (user_settings) {
 
     const admin_button = `
-        <h1> Admin Settings: </h1>
+        <h1 style="font-size:25px;"> Admin Settings: </h1>
         <form action="../htmls/documentation.html">
           <input style="width: 200px; margin-top: 2em;" type="submit" value="Get Documentation" />
         </form>
@@ -169,6 +169,7 @@ function display_logged_in_UI(user) {
 
           <hr>
 
+          <!--These inputs should change the actual account info for the -->
           <h2> Username: </h2>
           <input placeholder="${username}"/>
 
@@ -207,7 +208,7 @@ function display_logged_in_UI(user) {
                 <td>Snake</td>
                 <td> N/A </td>
                 <td> N/A </td>
-                <td> N/A </td>j
+                <td> N/A </td>
               </tr>
               <tr>
                 <td>TypeSprint</td>

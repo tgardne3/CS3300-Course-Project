@@ -145,14 +145,16 @@ function display_type_sprint() {
         //highlighting current word
         text_copy[word_count] = '<mark>' + text_copy[word_count] + '</mark>';
         //converting list to string for displaying
-        const test_string = text_copy.join(' ');
+        const text_string = text_copy.join(`   `);
 
         //creating an object for HTML display
         const test_body = document.createElement("div");
         test_body.className = "type-sprint";
         test_body.innerHTML = `
         <div>
-            <p>${test_string}</p>
+            <p>${text_string}</p>
+
+            <p class="ts-input">${current_word}</p>
         </div>
         `;
 
@@ -238,4 +240,5 @@ const page = document.addEventListener("keydown", (event) => {
     else {
         current_word += event.key;
     }
+    display_type_sprint();
 });

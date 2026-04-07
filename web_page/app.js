@@ -16,6 +16,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase
 // from other script files
 import { redirect_to_home } from "./scripts/auto_redirections.js"; 
 
+
 // Import the functions you need from the SDKs you need
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -249,7 +250,7 @@ function display_logged_in_UI(user) {
 
       </div>
     `;
-    if(username === "admin4" || username === "admin1" || username == "admin2") {
+    if(username === "admin4" || username === "admin1" || username === "admin2" || username === "admin3") {
         const admin_settings = document.querySelector(".admin-settings");
         admin_settings.innerHTML += admin_button;
     }

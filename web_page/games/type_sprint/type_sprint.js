@@ -116,7 +116,7 @@ let words = [
   "white","who","whole","whom","whose","why","wide","wife","will","win","wind",
   "window","wish","with","within","without","woman","wonder","word","work",
   "worker","world","worry","would","write","writer","wrong","yard","yeah","year",
-  "yes","yet","you","young","your","yourself", "hippopotamus", "buttcrack", "doody", "penguin"
+  "yes","yet","you","young","your","yourself", "hippopotamus", "penguin"
 ];
 
 let text = [];
@@ -131,7 +131,19 @@ let end_time;
 let test_time;
 let wpm;
 
-
+function reset_variables() {
+    text = [];
+    current_word = '';
+    word_count = 0;
+    correct = 0;
+    incorrect = 0;
+    accuracy = 0;
+    num_words = 30;
+    start_time = 0;
+    end_time = 0;
+    test_time = 0;
+    wpm = 0;
+}
 function start_timer() {
     start_time = Date.now() / 1000;
 }
@@ -169,18 +181,34 @@ function display_type_sprint() {
         body.appendChild(test_body);
 
     if(word_count === (text.length)) {
-        word_count = 0;
-        current_word = '';
+        
+        //calculate time
         end_time = Date.now() / 1000;
         test_time = (end_time - start_time);
-        console.log(`Total Time: ${test_time}`);
-        wpm = (60*(num_words/test_time));
+        let test_time_string = test_time.toString().slice(0, 5);//convert to printable string
 
-        console.log(`WPM: ${wpm}`);
+        //calculate words per minute
+        wpm = (60*(num_words/test_time));
+        let wpm_string = wpm.toString().slice(0, 5);//convert to printable string
+        //calcuate score
+        const score = (wpm * (accuracy / 100)).toString().slice(0, 5);//convert to printable string
+        let accuracy_string = accuracy.toString().slice(0, 5);//convert to printable string
+
+        console.log(`WPM: ${wpm_string}`);
 
         text = [];
+        Swal.fire({
+            theme: 'dark',
+            title: `You Scored: ${score}`,
+            text: `WPM: ${wpm_string}, Accuracy: ${accuracy_string}%, Time: ${test_time_string}s`,
+            icon: 'success',
+            confirmButtonText: 'Finish',
+            confirmButtonColor: '#FFED29'
+        });
+
+        //reset variables
+        reset_variables();
         generate_text();
-        alert(`WPM = ${wpm}`);
     }
 
     }

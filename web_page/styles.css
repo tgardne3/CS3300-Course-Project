@@ -446,6 +446,39 @@ table, th, td{
     color: black;
 }
 
+/* PATH TO PARADISE */
+.game-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.game-text {
+    text-align: center;
+    width: 800px;
+    font-size: 35px;
+    color: white;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 850px;
+}
+
+.user-input button {
+    width: 400px;
+    height: 100px;
+    margin: 10px;
+    background-color: #19232a;
+    border-radius: 15px;
+    color: white;
+    font-size: 22px;
+}
+
 
 /*Animations*/
 /*Submission Pages*/

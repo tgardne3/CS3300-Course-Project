@@ -130,6 +130,8 @@ let start_time;
 let end_time;
 let test_time;
 let wpm;
+let key_stroke = new Audio("../../audio/key_stroke.wav");
+let space_bar = new Audio("../../audio/space_bar.wav");
 
 function reset_variables() {
     text = [];
@@ -261,11 +263,15 @@ if(text.length === 0) {
 }
 const page = document.addEventListener("keydown", (event) => {
     if(event.code === 'Space') {
+        const space_audio = space_bar.cloneNode();
+        space_audio.play();
         game_loop(text);
     } else if (event.code === 'Backspace'){
         current_word = current_word.slice(0, -1);
     } 
     else if(event.key.length === 1){
+        const key_audio = key_stroke.cloneNode();
+        key_audio.play();
         current_word += event.key;
     }
     display_type_sprint();

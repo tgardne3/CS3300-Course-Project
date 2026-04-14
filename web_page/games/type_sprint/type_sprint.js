@@ -2,6 +2,7 @@
 names: Azam, Brandon, David, Trey
 class: CS330
 */
+import { saveScore } from "./leaderboard.js";
 
 let words = [
   "a","ability","able","about","above","accept","according","account","across",
@@ -181,6 +182,7 @@ function display_type_sprint() {
         text = [];
         generate_text();
         alert(`WPM = ${wpm}`);
+        saveScore("TypeSprint", currentScore);
     }
 
     }

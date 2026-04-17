@@ -1,21 +1,25 @@
 //name: Azam, Brandon, David, Trey
 //class: CS3300
 
-let default_choice = 0.0;
-let noChoice = false;
-let a_choice = 0.1;
-let b_choice = 0.2;
-let c_choice = 0.3;
-let d_choice = 0.4;
+let default_choice = 0.0; //entry point for reading JSON file
+let noChoice = false; //boolean for determining 
+let a_choice = 0.1; //JSON navigation
+let b_choice = 0.2; //JSON navigation
+let c_choice = 0.3; //JSON navigation
+let d_choice = 0.4; //JSON navigation
 let story_set = 0;
 let current_set = (0.0).toFixed(1);
 let story = {};
+let allowChoice = true;
 const space_bar = new Audio("../../audio/space_bar.wav");
 const key_stroke = new Audio ("../../audio/key_stroke.wav");
 
 
 //path to paradise game logic
 function display_text() {
+    //enabling input buffer
+    allowChoice = false;
+
     //set story key
     let key = current_set.toString();
     console.log(`Key: ${key}`);
@@ -41,6 +45,11 @@ function display_text() {
              } else {
                 key_sound.play();
              }
+            }
+
+            if(i === text_string.length) {
+                //disabling input buffer
+                allowChoice = true;
             }
         }, 35 * i);
     }
@@ -96,8 +105,8 @@ const btn_b = document.getElementById("btn-b");
 const btn_c = document.getElementById("btn-c");
 const btn_d = document.getElementById("btn-d");
 
-btn_a.addEventListener("click", () => update_choice(a_choice));
-btn_b.addEventListener("click", () => update_choice(b_choice));
-btn_c.addEventListener("click", () => update_choice(c_choice));
-btn_d.addEventListener("click", () => update_choice(d_choice));
+btn_a.addEventListener("click", () => {if(allowChoice === true) {update_choice(a_choice)}});
+btn_b.addEventListener("click", () => {if(allowChoice === true) {update_choice(b_choice)}});
+btn_c.addEventListener("click", () => {if(allowChoice === true) {update_choice(c_choice)}});
+btn_d.addEventListener("click", () => {if(allowChoice === true) {update_choice(d_choice)}});
 

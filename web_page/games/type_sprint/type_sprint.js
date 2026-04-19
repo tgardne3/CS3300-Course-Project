@@ -120,7 +120,7 @@ let words = [
 ];
 
 let text = [];
-let current_word = '';
+let current_word = ' ';
 let word_count = 0;
 let correct = 0;
 let incorrect = 0;
@@ -151,7 +151,7 @@ function start_timer() {
 }
 //display game
 function display_type_sprint() {
-
+    
     if(text.length > 0){
 
         //copy list to avoid changing original
@@ -235,7 +235,7 @@ function type_sprint() {
     //clear the input box
     console.log(text[word_count]);
     console.log(current_word.trim());
-    current_word = '';
+    current_word = ' ';
     word_count++;
     accuracy = (num_words - incorrect)/num_words * 100;
     console.log(accuracy);

@@ -1,5 +1,6 @@
-import { reset_game, is_game_over, move_snake, grow_snake, next_head, fruit, snake } from "./snake_game.js";
+import { reset_game, is_game_over, move_snake, grow_snake, next_head, fruit, snake, score } from "./snake_game.js";
 import { draw_game } from "./snake_canvas.js";
+import { saveScore } from "../../scripts/leaderboard.js";
 export { set_current_direction }
 
 // Declare variables
@@ -88,6 +89,7 @@ function game_tick() {
             document.getElementById("game_message").textContent =
                 "Game Over! Press Reset to play again";
         }
+        saveScore("snake", score);
         return;
     }
 

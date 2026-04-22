@@ -1,5 +1,6 @@
 // import { db } from "../../scripts/firebase-init.js";
 import { set_current_direction } from "./snake_render.js";
+import { saveScore } from "../../scripts/leaderboard.js"; 
 export { reset_game, is_game_over, move_snake, grow_snake, next_head, fruit, snake, score }; // add export to import it into reder file to get around issue
 
 // Declare variables
@@ -158,22 +159,3 @@ function update_score_display() {
     score_element.textContent = score;
 }
 
- async function saveScore() {
-     const username = localStorage.getItem("username");
-     if (!username) {
-         console.log("No username found");
-         return;
-     }
-     try {
-         await addDoc(collection(db, "leaderboard"), {
-             username: username,
-             score: score,
-             game: "Snake Game",
-             timestamp: Date.now()
-         });
-         // if it works
-         console.log("Score saved!");
-     } catch (error) { //error
-         console.error("Error saving score:", error);
-     }
- }

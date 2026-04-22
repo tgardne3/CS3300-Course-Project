@@ -3,6 +3,8 @@ names: Azam, Brandon, David, Trey
 class: CS330
 */
 
+import { saveScore } from "../../scripts/leaderboard.js";
+
 let words = [
   "a","ability","able","about","above","accept","according","account","across",
   "act","action","activity","actually","add","address","administration","admit",
@@ -199,6 +201,7 @@ function display_type_sprint() {
         console.log(`WPM: ${wpm_string}`);
 
         text = [];
+        saveScore("typesprint", parseFloat(score));
         Swal.fire({
             theme: 'dark',
             title: `You Scored: ${score}`,

@@ -158,23 +158,22 @@ function update_score_display() {
     score_element.textContent = score;
 }
 
-// // function to update score
-// async function saveScore() {
-//     const username = localStorage.getItem("username");
-//     if (!username) {
-//         console.log("No username found");
-//         return;
-//     }
-//     try {
-//         await addDoc(collection(db, "leaderboard"), {
-//             username: username,
-//             score: score,
-//             game: "Snake Game",
-//             timestamp: Date.now()
-//         });
-//         // if it works
-//         console.log("Score saved!");
-//     } catch (error) { //error
-//         console.error("Error saving score:", error);
-//     }
-// }
+ async function saveScore() {
+     const username = localStorage.getItem("username");
+     if (!username) {
+         console.log("No username found");
+         return;
+     }
+     try {
+         await addDoc(collection(db, "leaderboard"), {
+             username: username,
+             score: score,
+             game: "Snake Game",
+             timestamp: Date.now()
+         });
+         // if it works
+         console.log("Score saved!");
+     } catch (error) { //error
+         console.error("Error saving score:", error);
+     }
+ }

@@ -1,11 +1,9 @@
-// import { db } from "../../scripts/firebase-init.js";
 import { set_current_direction } from "./snake_render.js";
 import { saveScore } from "../../scripts/leaderboard.js"; 
 export { reset_game, is_game_over, move_snake, grow_snake, next_head, fruit, snake, score }; // add export to import it into reder file to get around issue
 
 // Declare variables
 let end_game = false;
-// let score_saved = false;
 
 let fruit = {x: 8, y: 6}; // initial fruit spawn
 
@@ -107,7 +105,6 @@ function detect_collision(head) {
 }
 
 // Function to tell the render.js if game is over
-// also double checks to make sure the score is saved since functions are in awkward orders
 function is_game_over() {
     return end_game;
 }
@@ -147,7 +144,7 @@ function reset_game() {
     "3,6",
     ])
 
-    set_current_direction("s");
+    set_current_direction("s"); // reset current direction back to start direction
 
     score = 3;
     update_score_display();

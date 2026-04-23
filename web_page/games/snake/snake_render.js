@@ -25,7 +25,7 @@ document.addEventListener("keydown", (event) => {
         ArrowLeft: "l"
     };
 
-    const new_direction = arrowKeys[event.key];
+    const new_direction = arrowKeys[event.key]; // Do nothing unless arrow key is pressed
     if (!new_direction) return;
 
     // remove start message
@@ -53,7 +53,7 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-// Helper function to set current_direction
+// Helper function to set current_direction in snake_game.js
 function set_current_direction(direction) {
     current_direction = direction;
 }
